@@ -8,7 +8,7 @@ COPY requirements.txt /app/requirements.txt
 
 COPY entrypoint.sh /app/entrypoint.sh
 
-RUN sudo apt update -y && \
+RUN apt update -y && \
     pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt && \
     chmod +x /app/entrypoint.sh
